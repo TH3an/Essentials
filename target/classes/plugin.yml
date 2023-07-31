@@ -1,0 +1,21 @@
+name: Essentials
+version: '1.0-Dev'
+main: me.thunthean.main
+api-version: '1.16'
+authors: [thunthean]
+description: A Essentials plugin
+website: www.thunthean.me
+commands:
+  vanish:
+    description: A vanish command
+  tps:
+    description: A command that check tps (Ticks per second)
+  Essentialsreload:
+    description: A command that reload config.yml
+  god:
+    description: A command that will give you god power
+  fly:
+    description: A command that let you fly
+    #add shoutcut command
+  heal:
+    description: A command that heal you

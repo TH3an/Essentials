@@ -1,0 +1,16 @@
+#######################
+# A Essentials plugin #
+#######################
+
+# Allow one player to skip the night!
+# For 1.17 you can do /Gamerule.
+OnePlayerSleep: false
+
+# Join and Leave Message!
+JoinAndLeave: false
+#JoinAndLeave-Prefix: "Essentials" # Not available
+
+# Discord Bot Support **(BETA VERSION)**
+Discord-Bot: false
+Discord-Bot-Token: "ENTER_YOUR_DISCORD_BOT_TOKEN"
+Discord-Status-Message: ""
