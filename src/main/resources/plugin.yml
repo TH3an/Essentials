@@ -16,6 +16,26 @@ commands:
     description: A command that will give you god power
   fly:
     description: A command that let you fly
-    #add shoutcut command
+    aliases:
+      - flight
   heal:
     description: A command that heal you
+  gamemode:
+    description: game-modes commands
+  creative:
+    description: game-modes commands
+    aliases:
+      - gmc
+  survival:
+    description: game-modes commands
+    aliases:
+      - gms
+  adventure:
+    description: game-modes commands
+    aliases:
+      - gma
+  spectator:
+    description: game-modes commands
+    aliases:
+      - gmsp
+      - gmt

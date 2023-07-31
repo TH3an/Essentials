@@ -1,7 +1,7 @@
 package me.thunthean;
 
 import me.thunthean.Commands.*;
-import me.thunthean.Commands.GameModes.GameModeCMD;
+import me.thunthean.Commands.GameModes.*;
 import me.thunthean.Events.BedListener;
 import me.thunthean.Events.JoinAndLeave;
 import me.thunthean.Events.ReadyListener;
@@ -36,8 +36,12 @@ public final class main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BedListener(), this);
 
         //Register Commands
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading gamemode");
+        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading gamemodes");
         getCommand("gamemode").setExecutor(new GameModeCMD());
+        getCommand("creative").setExecutor(new CreativeMode());
+        getCommand("survival").setExecutor(new SurvivalMode());
+        getCommand("spectator").setExecutor(new SpectatorMode());
+        getCommand("adventure").setExecutor(new AdventureMode());
         getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading fly");
         getCommand("fly").setExecutor(new fly());
         getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading heal");
