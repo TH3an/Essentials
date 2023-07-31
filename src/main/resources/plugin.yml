@@ -10,8 +10,10 @@ commands:
     description: A vanish command
   tps:
     description: A command that check tps (Ticks per second)
-  Essentialsreload:
+  essentialsreload:
     description: A command that reload config.yml
+    aliases:
+      - Essentialsreload
   god:
     description: A command that will give you god power
   fly:
@@ -39,3 +41,7 @@ commands:
     aliases:
       - gmsp
       - gmt
+  essentials:
+    description: A essentials command
+    aliases:
+      - Essentials

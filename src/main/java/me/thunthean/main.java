@@ -51,7 +51,8 @@ public final class main extends JavaPlugin {
         getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading tps");
         getCommand("tps").setExecutor(new TpsCMD());
         getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading reload command");
-        getCommand("Essentialsreload").setExecutor(new ReloadCMD());
+        getCommand("essentialsreload").setExecutor(new ReloadCMD());
+        getCommand("essentials").setExecutor(new EssentialsCMD());
 
     }
 
