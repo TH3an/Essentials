@@ -13,3 +13,4 @@ JoinAndLeave: false
 # Discord Bot Support **(BETA VERSION)**
 Discord-Bot: false
 Discord-Bot-Token: "ENTER_YOUR_DISCORD_BOT_TOKEN"
+Discord-Status-Message: ""
