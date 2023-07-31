@@ -49,6 +49,13 @@ public final class main extends JavaPlugin {
         getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading reload command");
         getCommand("Essentialsreload").setExecutor(new ReloadCMD());
 
+    }
+
+    @Override
+    public void onEnable() {
+        // Plugin startup logic
+        instance = this;
+
         if(getConfig().getBoolean("Discord-Bot")) {
             JDABuilder builder = JDABuilder.createDefault(getConfig().getString("Discord-Bot-Token"));
 
@@ -62,17 +69,6 @@ public final class main extends JavaPlugin {
             builder.setActivity(Activity.watching(Objects.requireNonNull(getConfig().getString("Discord-Status-Message"))));
 
             builder.build();
-        }
-    }
-
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
-        instance = this;
-
-        if(getConfig().getBoolean("Discord-Bot")) {
-            // Using Discord JDA
-            // Create a Discord Bot
         }
     }
 
