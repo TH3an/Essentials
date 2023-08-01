@@ -49,7 +49,7 @@ public class BedListener implements Listener {
               @Override
               public void run() {
                   if (player.isSleeping()) {
-                      if (world.getTime() >= NIGHT_TIME_END && world.getTime() <= NIGHT_TIME_END) {
+                      if (world.getTime() >= NIGHT_TIME_START && world.getTime() <= NIGHT_TIME_END) {
                           player.sendMessage(PREFIX + player.getName() + "has been slept");
                           world.setTime(0);
                           world.setThundering(false);
