@@ -18,10 +18,11 @@ public class TellCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(args.length == 1) {
+            if(args.length >= 1 && args.length <= 2) {
                 player.sendMessage(PREFIX + "Please do /tell <name> <message>");
                 return true;
             }
+
             if(args.length == 3) {
                 String name = args[0];
                 List<String> Argslist = new ArrayList<>(Arrays.asList(args));
