@@ -7,7 +7,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static me.thunthean.main.PREFIX;
 
@@ -22,7 +24,8 @@ public class TellCMD implements CommandExecutor {
             }
             if(args.length == 3) {
                 String name = args[0];
-                String message = args[1];
+                List<String> Argslist = new ArrayList<>(Arrays.asList(args));
+                String message = String.join(" ", Argslist);
                 Player getname = Bukkit.getPlayer(name);
 
                 if(getname == null || !getname.isOnline()) {
