@@ -31,7 +31,7 @@ public class KillCMD implements CommandExecutor {
                         player.sendMessage(PREFIX + "Player is not found!");
                         return true;
                     }
-                    //Killed the target
+                    //Kill the target
                     target.setHealth(0);
                     player.sendMessage(PREFIX + target + " got killed");
                 }
