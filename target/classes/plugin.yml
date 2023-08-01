@@ -6,16 +6,48 @@ authors: [thunthean]
 description: A Essentials plugin
 website: www.thunthean.me
 commands:
+  whitelist:
+    description: A whitelist command
   vanish:
     description: A vanish command
   tps:
     description: A command that check tps (Ticks per second)
-  Essentialsreload:
+  essentialsreload:
     description: A command that reload config.yml
+    aliases:
+      - Essentialsreload
   god:
     description: A command that will give you god power
   fly:
     description: A command that let you fly
-    #add shoutcut command
+    aliases:
+      - flight
   heal:
     description: A command that heal you
+  gamemode:
+    description: game-modes commands
+  creative:
+    description: game-modes commands
+    aliases:
+      - gmc
+  survival:
+    description: game-modes commands
+    aliases:
+      - gms
+  adventure:
+    description: game-modes commands
+    aliases:
+      - gma
+  spectator:
+    description: game-modes commands
+    aliases:
+      - gmsp
+      - gmt
+  essentials:
+    description: A essentials command
+    aliases:
+      - Essentials
+  kill:
+    description: A kill command
+    aliases:
+      - suicide
