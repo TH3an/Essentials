@@ -31,8 +31,8 @@ public class TellCMD implements CommandExecutor {
                 if(getname == null || !getname.isOnline()) {
                     player.sendMessage(PREFIX + "Player is not found");
                 }else{
-                    getname.sendMessage(PREFIX + "[TELL]: " + player.getName() + " -> You: " + Arrays.toString(message.split(" ")));
-                    player.sendMessage(PREFIX + "[TELL]: You -> " + getname.getName() + ": " + Arrays.toString(message.split(" ")));
+                    getname.sendMessage(PREFIX + "[TELL]: " + player.getName() + " -> You: " + message);
+                    player.sendMessage(PREFIX + "[TELL]: You -> " + getname.getName() + ": " + message);
                 }
 
             }
