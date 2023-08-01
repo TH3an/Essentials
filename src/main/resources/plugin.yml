@@ -6,6 +6,8 @@ authors: [thunthean]
 description: A Essentials plugin
 website: www.thunthean.me
 commands:
+  whitelist:
+    description: A whitelist command
   vanish:
     description: A vanish command
   tps:

@@ -11,6 +11,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -20,7 +21,6 @@ public final class main extends JavaPlugin {
 
     public boolean vanish = false;
 
-    private JDABuilder builder;
 
     public static final String PREFIX = ChatColor.GRAY + "[" + ChatColor.DARK_RED + "Essentials" + ChatColor.GRAY + "] ► "  + ChatColor.GRAY;
 
@@ -42,6 +42,7 @@ public final class main extends JavaPlugin {
         getCommand("survival").setExecutor(new SurvivalMode());
         getCommand("spectator").setExecutor(new SpectatorMode());
         getCommand("adventure").setExecutor(new AdventureMode());
+        getCommand("whitelist").setExecutor(new WhitelistCMD());
         getCommand("fly").setExecutor(new fly());
         getCommand("god").setExecutor(new GodCMD());
         getCommand("heal").setExecutor(new HealCMD());

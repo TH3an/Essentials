@@ -20,7 +20,7 @@ public class EssentialsCMD implements CommandExecutor {
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("help")) {
-                    player.sendMessage(PREFIX + "");
+                    player.sendMessage(PREFIX + "Test");
                 }
                 if (args[0].equalsIgnoreCase("discord")) {
                     player.sendMessage(PREFIX + "Discord Link: https://discord.gg/example");
