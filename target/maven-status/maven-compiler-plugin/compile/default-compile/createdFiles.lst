@@ -2,6 +2,8 @@ me\thunthean\Events\BedListener.class
 me\thunthean\Commands\GameModes\AdventureMode.class
 me\thunthean\main.class
 me\thunthean\Commands\TpsCMD.class
+me\thunthean\Commands\KillCMD.class
+me\thunthean\Commands\EssentialsCMD.class
 me\thunthean\Events\BedListener$1.class
 me\thunthean\Commands\GameModes\SpectatorMode.class
 me\thunthean\Commands\GameModes\GameModeCMD.class
@@ -12,5 +14,6 @@ me\thunthean\Events\JoinAndLeave.class
 me\thunthean\Commands\HealCMD.class
 me\thunthean\Commands\ReloadCMD.class
 me\thunthean\Events\ReadyListener.class
+me\thunthean\Commands\WhitelistCMD.class
 me\thunthean\Commands\GameModes\SurvivalMode.class
 me\thunthean\Commands\GameModes\CreativeMode.class
