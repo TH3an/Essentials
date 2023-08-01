@@ -6,6 +6,10 @@ authors: [thunthean]
 description: A Essentials plugin
 website: www.thunthean.me
 commands:
+  tell:
+    description: A tell command
+    aliases:
+      - whisper
   whitelist:
     description: A whitelist command
   vanish:
