@@ -15,7 +15,7 @@ public class VanishCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.commands.vanish")) {
+            if(player.hasPermission("Essentials.commands.vanish") || player.hasPermission("Essentials.*")) {
                 main.getInstance().vanish = !main.getInstance().vanish;
                 if (args.length == 1) {
                     player.sendMessage(PREFIX + "Vanish mode: " + (main.getInstance().vanish ? ChatColor.GREEN + "enabled" : ChatColor.RED + "disabled"));
@@ -38,6 +38,8 @@ public class VanishCMD implements CommandExecutor {
                         player.sendMessage(PREFIX + "Vanish mode is already: " + ChatColor.RED + "OFF");
                     }
                 }
+            }else{
+                player.sendMessage(PREFIX + "You don't have permission!");
             }
         }
         return true;

@@ -13,7 +13,7 @@ public class HealCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.command.heal")) {
+            if(player.hasPermission("Essentials.command.heal") || player.hasPermission("Essentials.*")) {
                 player.sendMessage(PREFIX + "You have been healed!");
             }else{
                 player.sendMessage(PREFIX + "You don't have permission!");

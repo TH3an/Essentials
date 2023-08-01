@@ -14,7 +14,7 @@ public class GameModeCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.gamemode.all")) {
+            if(player.hasPermission("Essentials.gamemode.all") || player.hasPermission("Essentials.*")) {
                 if(args.length == 1) {
                     player.sendMessage(PREFIX + "Please do /gamemode <gamemode>!");
                     return true;

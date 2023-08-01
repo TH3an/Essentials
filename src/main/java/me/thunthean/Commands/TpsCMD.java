@@ -16,7 +16,7 @@ public class TpsCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.commands.tps")) {
+            if(player.hasPermission("Essentials.commands.tps") || player.hasPermission("Essentials.*")) {
                     sender.sendMessage(PREFIX + "TPS: " + TPS);
             }else{
                 player.sendMessage(PREFIX + "You don't have permission!");

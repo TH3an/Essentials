@@ -18,7 +18,7 @@ public class fly implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.commands.fly") || player.hasPermission("Essentials.commands.flight")) {
+            if(player.hasPermission("Essentials.commands.fly") || player.hasPermission("Essentials.commands.flight") || player.hasPermission("Essentials.*")) {
                 if (list_of_flying_players.contains(player)) {
                     list_of_flying_players.remove(player);
                     player.setAllowFlight(false);

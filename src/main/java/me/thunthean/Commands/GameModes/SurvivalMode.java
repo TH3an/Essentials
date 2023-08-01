@@ -14,7 +14,7 @@ public class SurvivalMode implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.gamemode.survival")) {
+            if(player.hasPermission("Essentials.gamemode.survival") || player.hasPermission("Essentials.*")) {
                 player.setGameMode(GameMode.SURVIVAL);
                 player.sendMessage(PREFIX + "You're now on survival mode.");
             }else{

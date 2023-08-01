@@ -14,7 +14,7 @@ public class SpectatorMode implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.gamemode.spectator")) {
+            if(player.hasPermission("Essentials.gamemode.spectator") || player.hasPermission("Essentials.*")) {
                 player.setGameMode(GameMode.SPECTATOR);
                 player.sendMessage(PREFIX + "You're now on spectator mode.");
             }else{

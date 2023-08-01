@@ -14,7 +14,7 @@ public class CreativeMode implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.gamemode.creative")) {
+            if(player.hasPermission("Essentials.gamemode.creative") || player.hasPermission("Essentials.*")) {
                 player.setGameMode(GameMode.CREATIVE);
                 player.sendMessage(PREFIX + "You're now on creative mode.");
             }else{

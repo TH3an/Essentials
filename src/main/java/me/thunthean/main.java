@@ -19,6 +19,7 @@ public final class main extends JavaPlugin {
     public static main instance;
 
     public boolean vanish = false;
+
     private JDABuilder builder;
 
     public static final String PREFIX = ChatColor.GRAY + "[" + ChatColor.DARK_RED + "Essentials" + ChatColor.GRAY + "] ► "  + ChatColor.GRAY;
@@ -30,28 +31,22 @@ public final class main extends JavaPlugin {
         saveDefaultConfig();
 
         // Register Events
-        getServer().getConsoleSender().sendMessage(PREFIX + "[EVENTS]: Registering JoinAndLeave");
+        getServer().getConsoleSender().sendMessage(PREFIX + "[EVENTS]: Registering Events");
         getServer().getPluginManager().registerEvents(new JoinAndLeave(), this);
-        getServer().getConsoleSender().sendMessage(PREFIX + "[EVENTS]: Registering BedListener");
         getServer().getPluginManager().registerEvents(new BedListener(), this);
 
         //Register Commands
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading gamemodes");
+        getServer().getConsoleSender().sendMessage(PREFIX + "Loading commands");
         getCommand("gamemode").setExecutor(new GameModeCMD());
         getCommand("creative").setExecutor(new CreativeMode());
         getCommand("survival").setExecutor(new SurvivalMode());
         getCommand("spectator").setExecutor(new SpectatorMode());
         getCommand("adventure").setExecutor(new AdventureMode());
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading fly");
         getCommand("fly").setExecutor(new fly());
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading heal");
         getCommand("heal").setExecutor(new HealCMD());
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading vanish");
         getCommand("vanish").setExecutor(new VanishCMD());
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading tps");
         getCommand("tps").setExecutor(new TpsCMD());
-        getServer().getConsoleSender().sendMessage(PREFIX + "[COMMANDS]: loading reload command");
-        getCommand("essentialsreload").setExecutor(new ReloadCMD());
+        getCommand("essentialsreload").setExecutor(new ReloadCMD()); // Unnecessary Might delete it soon
         getCommand("essentials").setExecutor(new EssentialsCMD());
 
     }
@@ -60,6 +55,8 @@ public final class main extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         instance = this;
+
+        getServer().getConsoleSender().sendMessage(PREFIX + "is enabled");
 
         if(getConfig().getBoolean("Discord-Bot")) {
             JDABuilder builder = JDABuilder.createDefault(getConfig().getString("Discord-Bot-Token"));

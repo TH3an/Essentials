@@ -14,7 +14,7 @@ public class AdventureMode implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("Essentials.gamemode.adventure")) {
+            if(player.hasPermission("Essentials.gamemode.adventure") || player.hasPermission("Essentials.*")) {
                 player.setGameMode(GameMode.ADVENTURE);
                 player.sendMessage(PREFIX + "You're now on adventure mode.");
             }else{
