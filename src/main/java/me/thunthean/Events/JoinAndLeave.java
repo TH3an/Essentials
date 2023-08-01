@@ -26,7 +26,7 @@ public class JoinAndLeave implements Listener {
        }
        //A Layer protection whitelist system
        //can be spoofed with private client
-       if(!player.isWhitelisted()) {
+       if(!player.isWhitelisted() && Bukkit.getServer().hasWhitelist()) {
            player.sendTitle(ChatColor.RED + "[ALERTS] UNKNOWN PLAYER [ALERTS]","", 1, 20 * 10, 1);
            player.sendMessage(PREFIX + ChatColor.RED + "Don't spy on us! :)");
            player.setInvulnerable(true);
@@ -77,7 +77,7 @@ public class JoinAndLeave implements Listener {
        }
        //A Layer protection whitelist system
        //can be spoofed with private client
-       if(!player.isWhitelisted() && player.hasPotionEffect(PotionEffectType.BLINDNESS) && player.hasPotionEffect(PotionEffectType.WEAKNESS) && player.hasPotionEffect(PotionEffectType.SATURATION)) {
+       if(Bukkit.getServer().hasWhitelist() && !player.isWhitelisted() && player.hasPotionEffect(PotionEffectType.BLINDNESS) && player.hasPotionEffect(PotionEffectType.WEAKNESS) && player.hasPotionEffect(PotionEffectType.SATURATION)) {
            player.setInvulnerable(false);
            player.removePotionEffect(PotionEffectType.BLINDNESS);
            player.removePotionEffect(PotionEffectType.WEAKNESS);
