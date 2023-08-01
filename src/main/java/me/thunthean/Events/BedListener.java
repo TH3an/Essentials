@@ -8,7 +8,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 import static me.thunthean.main.PREFIX;
 
@@ -43,7 +45,7 @@ public class BedListener implements Listener {
               return;
           }
 
-          new BukkitRunnable() {
+          BukkitTask task =  new BukkitRunnable() {
               @Override
               public void run() {
                   if (player.isSleeping()) {
@@ -58,11 +60,21 @@ public class BedListener implements Listener {
                   }
               }
           }.runTaskLater(main.getInstance(), 100L);
+          player.setMetadata("sleepTask", new FixedMetadataValue(main.getInstance(), task));
       }
     }
     @EventHandler
     public void OnLeaveBd(PlayerQuitEvent e) {
         Player player = e.getPlayer();
+        if (player.hasMetadata("sleepTask")) {
+            // Retrieve the task from the player's metadata
+            BukkitTask task = (BukkitTask) player.getMetadata("sleepTask").get(0).value();
 
+            // Cancel the task
+            task.cancel();
+
+            // Remove the metadata from the player
+            player.removeMetadata("sleepTask", main.getInstance());
+        }
     }
 }
