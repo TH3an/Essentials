@@ -26,6 +26,7 @@ public class TellCMD implements CommandExecutor {
             if(args.length == 3) {
                 String name = args[0];
                 List<String> Argslist = new ArrayList<>(Arrays.asList(args));
+                Argslist.remove(0);
                 String message = String.join(" ", Argslist);
                 Player getname = Bukkit.getPlayer(name);
 
