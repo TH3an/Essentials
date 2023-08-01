@@ -43,9 +43,11 @@ public final class main extends JavaPlugin {
         getCommand("spectator").setExecutor(new SpectatorMode());
         getCommand("adventure").setExecutor(new AdventureMode());
         getCommand("fly").setExecutor(new fly());
+        getCommand("god").setExecutor(new GodCMD());
         getCommand("heal").setExecutor(new HealCMD());
         getCommand("vanish").setExecutor(new VanishCMD());
         getCommand("tps").setExecutor(new TpsCMD());
+        getCommand("kill").setExecutor(new KillCMD());
         getCommand("essentialsreload").setExecutor(new ReloadCMD()); // Unnecessary Might delete it soon
         getCommand("essentials").setExecutor(new EssentialsCMD());
 

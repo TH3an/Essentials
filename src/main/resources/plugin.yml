@@ -45,3 +45,7 @@ commands:
     description: A essentials command
     aliases:
       - Essentials
+  kill:
+    description: A kill command
+    aliases:
+      - suicide
