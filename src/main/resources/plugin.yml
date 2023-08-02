@@ -10,6 +10,7 @@ commands:
     description: A tell command
     aliases:
       - whisper
+      - msg
   whitelist:
     description: A whitelist command
   vanish:
