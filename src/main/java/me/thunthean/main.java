@@ -2,6 +2,8 @@ package me.thunthean;
 
 import me.thunthean.Commands.*;
 import me.thunthean.Commands.GameModes.*;
+import me.thunthean.Commands.ModsCMD.AnnounceCMD;
+import me.thunthean.Commands.ModsCMD.ShutdownCMD;
 import me.thunthean.Events.BedListener;
 import me.thunthean.Events.JoinAndLeave;
 import me.thunthean.Events.ReadyListener;
@@ -20,6 +22,9 @@ public final class main extends JavaPlugin {
 
     public boolean vanish = false;
 
+    public static final String ANNOUNCEMENT = ChatColor.GRAY + "[" + ChatColor.DARK_RED + "ANNOUNCEMENT" + ChatColor.GRAY + "] ► "  + ChatColor.GRAY;
+
+    public static final String PUNISHMENTPREFIX = ChatColor.GRAY + "[" + ChatColor.DARK_RED + "PUNISHMENT" + ChatColor.GRAY + "] ► "  + ChatColor.GRAY;
 
     public static final String PREFIX = ChatColor.GRAY + "[" + ChatColor.DARK_RED + "Essentials" + ChatColor.GRAY + "] ► "  + ChatColor.GRAY;
 
@@ -49,8 +54,11 @@ public final class main extends JavaPlugin {
         getCommand("vanish").setExecutor(new VanishCMD());
         getCommand("tps").setExecutor(new TpsCMD());
         getCommand("kill").setExecutor(new KillCMD());
+        getCommand("ping").setExecutor(new PingCMD());
+        getCommand("announce").setExecutor(new AnnounceCMD());
         getCommand("essentialsreload").setExecutor(new ReloadCMD()); // Unnecessary Might delete it soon
         getCommand("essentials").setExecutor(new EssentialsCMD());
+        getCommand("shutdown").setExecutor(new ShutdownCMD());
 
     }
 

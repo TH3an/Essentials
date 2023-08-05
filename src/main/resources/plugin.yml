@@ -6,6 +6,14 @@ authors: [thunthean]
 description: A Essentials plugin
 website: www.thunthean.me
 commands:
+  ping:
+    description: A ping command
+  announce:
+    description: A announce command
+  shutdown:
+    description: A shutdown command
+    aliases:
+      - stop
   tell:
     description: A tell command
     aliases:

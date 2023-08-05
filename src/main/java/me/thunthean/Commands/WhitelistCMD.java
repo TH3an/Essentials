@@ -76,6 +76,8 @@ public class WhitelistCMD implements CommandExecutor {
                         player.sendMessage(PREFIX + "Server whitelist is already: " + ChatColor.RED + "OFF");
                     }
                 }
+            }else{
+                player.sendMessage(PREFIX + "You don't have permission!");
             }
         }
         return true;
