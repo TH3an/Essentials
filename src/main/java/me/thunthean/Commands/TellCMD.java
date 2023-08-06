@@ -1,6 +1,7 @@
 package me.thunthean.Commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -33,8 +34,8 @@ public class TellCMD implements CommandExecutor {
                 if(getname == null || !getname.isOnline()) {
                     player.sendMessage(PREFIX + "Player is not found");
                 }else{
-                    getname.sendMessage(PREFIX + "[TELL]: " + player.getName() + " -> You: " + message);
-                    player.sendMessage(PREFIX + "[TELL]: You -> " + getname.getName() + ": " + message);
+                    getname.sendMessage(ChatColor.GRAY + "[TELL]: " + player.getName() + " -> You: " + message);
+                    player.sendMessage(ChatColor.GRAY + "[TELL]: You -> " + getname.getName() + ": " + message);
                 }
 
             }
