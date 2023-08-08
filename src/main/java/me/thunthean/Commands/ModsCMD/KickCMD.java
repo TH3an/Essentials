@@ -21,11 +21,11 @@ public class KickCMD implements CommandExecutor {
         if(sender instanceof Player) {
             Player player = (Player) sender;
             if(player.hasPermission("Essential.commands.kick")) {
-                if (args.length == 1) {
+                if (args.length == 0) {
                     player.sendMessage(PREFIX + "Please do /kick <name> <reason>");
                     return true;
                 }
-                if (args.length == 2) {
+                if (args.length == 1) {
                     String getname = args[0];
                     Player target = Bukkit.getPlayer(getname);
 
@@ -36,7 +36,7 @@ public class KickCMD implements CommandExecutor {
                         player.sendMessage(PREFIX + target.getName() + " got kicked");
                     }
                 }
-                if (args.length == 3) {
+                if (args.length == 2) {
                     List<String> Argslist = new ArrayList<>(Arrays.asList(args));
                     Argslist.remove(0);
                     String getname = args[0];

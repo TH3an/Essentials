@@ -19,7 +19,7 @@ public class WhitelistCMD implements CommandExecutor {
         if(sender instanceof Player) {
             Player player = (Player) sender;
             if(player.hasPermission("Essentials.commands.whitelist")) {
-                if (args.length == 1) {
+                if (args.length == 0) {
                     player.sendMessage(PREFIX + "Please do /whitelist <add/remove> <name>");
                     player.sendMessage(PREFIX + "Please do /whitelist <on/off>");
                     return true;

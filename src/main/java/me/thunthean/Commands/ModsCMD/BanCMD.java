@@ -22,11 +22,11 @@ public class BanCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(args.length == 1) {
+            if(args.length == 0) {
                 player.sendMessage(PREFIX + "Please do /ban <name> <reason>");
                 return true;
             }
-            if(args.length == 2) {
+            if(args.length == 1) {
                 String getname = args[0];
                 OfflinePlayer target = Bukkit.getOfflinePlayer(getname);
 
@@ -34,7 +34,7 @@ public class BanCMD implements CommandExecutor {
                 player.sendMessage(PREFIX + target.getName() + " got banned");
             }
 
-            if(args.length == 3) {
+            if(args.length == 2) {
                 String getname  = args[0];
                 List<String> ArrayList = new ArrayList<>(Arrays.asList(args));
                 ArrayList.remove(0);

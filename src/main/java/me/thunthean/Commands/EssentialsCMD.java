@@ -15,7 +15,7 @@ public class EssentialsCMD implements CommandExecutor {
         if(sender instanceof Player) {
             Player player = (Player) sender;
             if(player.hasPermission("Essentials.help") || player.hasPermission("Essentials.*")) {
-                if (args.length == 1) {
+                if (args.length == 0) {
                     player.sendMessage(PREFIX + "version is on: " + main.getInstance().getDescription().getVersion());
                     return true;
                 }

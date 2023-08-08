@@ -18,10 +18,6 @@ public class KillCMD implements CommandExecutor {
             Player player = (Player) sender;
             String GetPlayerName = args[0];
             if(player.hasPermission("Essentials.commands.kill")) {
-                if (args.length == 1) {
-                    player.setHealth(0);
-                    player.sendMessage(PREFIX + "You're got killed");
-                }
                 if (args[0].equalsIgnoreCase(GetPlayerName)) {
 
                    //String GetPlayerName = args[0]

@@ -19,12 +19,12 @@ public class AnnounceCMD implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(args.length == 1) {
+            if(args.length == 0) {
                 player.sendMessage(PREFIX + "Please do /announce <message>");
                 return true;
             }
             if(player.hasPermission("Essentials.commands.announce") || player.isOp()) {
-                if(args.length == 2) {
+                if(args.length == 1) {
                     List<String> Argslist = new ArrayList<>(Arrays.asList(args));
                     Argslist.remove(0);
                     String message = String.join(" ", Argslist);
