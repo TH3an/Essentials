@@ -4,6 +4,7 @@ import me.thunthean.Commands.*;
 import me.thunthean.Commands.GameModes.*;
 import me.thunthean.Commands.ModsCMD.AnnounceCMD;
 import me.thunthean.Commands.ModsCMD.ShutdownCMD;
+import me.thunthean.Commands.Utils.TabComplete;
 import me.thunthean.Events.BedListener;
 import me.thunthean.Events.JoinAndLeave;
 import me.thunthean.Events.ReadyListener;
@@ -58,6 +59,7 @@ public final class main extends JavaPlugin {
         getCommand("announce").setExecutor(new AnnounceCMD());
         getCommand("essentialsreload").setExecutor(new ReloadCMD()); // Unnecessary Might delete it soon
         getCommand("essentials").setExecutor(new EssentialsCMD());
+        getCommand("essentials").setTabCompleter(new TabComplete());
         getCommand("shutdown").setExecutor(new ShutdownCMD());
 
     }
