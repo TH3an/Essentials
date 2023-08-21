@@ -57,7 +57,6 @@ public final class main extends JavaPlugin {
         getCommand("kill").setExecutor(new KillCMD());
         getCommand("ping").setExecutor(new PingCMD());
         getCommand("announce").setExecutor(new AnnounceCMD());
-        getCommand("essentialsreload").setExecutor(new ReloadCMD()); // Unnecessary Might delete it soon
         getCommand("essentials").setExecutor(new EssentialsCMD());
         getCommand("essentials").setTabCompleter(new TabComplete());
         getCommand("shutdown").setExecutor(new ShutdownCMD());
