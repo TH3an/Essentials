@@ -37,11 +37,24 @@ public final class main extends JavaPlugin {
 
         // Register Events
         getServer().getConsoleSender().sendMessage(PREFIX + "[EVENTS]: Registering Events");
+
+        //Register Commands
+        getServer().getConsoleSender().sendMessage(PREFIX + "Loading commands");
+
+    }
+
+    @Override
+    public void onEnable() {
+        // Plugin startup logic
+        instance = this;
+
+        getServer().getConsoleSender().sendMessage(PREFIX + "is enabled");
+
+        // Register Events
         getServer().getPluginManager().registerEvents(new JoinAndLeave(), this);
         getServer().getPluginManager().registerEvents(new BedListener(), this);
 
         //Register Commands
-        getServer().getConsoleSender().sendMessage(PREFIX + "Loading commands");
         getCommand("gamemode").setExecutor(new GameModeCMD());
         getCommand("creative").setExecutor(new CreativeMode());
         getCommand("survival").setExecutor(new SurvivalMode());
@@ -60,15 +73,6 @@ public final class main extends JavaPlugin {
         getCommand("essentials").setExecutor(new EssentialsCMD());
         getCommand("essentials").setTabCompleter(new TabComplete());
         getCommand("shutdown").setExecutor(new ShutdownCMD());
-
-    }
-
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
-        instance = this;
-
-        getServer().getConsoleSender().sendMessage(PREFIX + "is enabled");
 
         if(getConfig().getBoolean("Discord-Bot")) {
             JDABuilder builder = JDABuilder.createDefault(getConfig().getString("Discord-Bot-Token"));
